@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="CssLogin.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <meta charset = "utf-8">
+   </head>
+
+   <body>
+
+
+   <div id="fullscreen_bg" class="fullscreen_bg">
+
+
+   <div class="container">
+
+   <h1 class="form-signin-heading text-muted">Log In</h1><hr>
+
+   <form action="checkloginCRUD.php" method="post" class="form-singnin">
+
+       <label>Nombre Usuario:</label><br>
+   <input class="form-control" name="usuario" type="text" id="usuario">
+   <br><br>
+
+   <label>Contraseña:</label><br>
+   <input class="form-control" name="password" type="password" id="password">
+   <br><br>
+
+   <div><input name="login" type="submit" value="login"></div>
+   </form>
+
+   <form action="formulario_registroCRUD.html" method="post" class="form-singnin">
+   <button type="submit" class="btn btn-success">   
+   <span class="glyphicon glyphicon-ok"></span> Registro
+   </button>
+   </form>
+
+   <hr>
+
+   <form action="formulario_contraseñaCRUD.html" method="post" class="form-singnin">
+   <button type="submit" class="btn btn-success">   
+   <span class="glyphicon glyphicon-ok"></span> ¿Has olvidado tu contraseña?
+   </button>
+   </form>
+
+</div>
+
+ </body>
+</html>

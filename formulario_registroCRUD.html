@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Registrar Usuario</title>
+ <meta charset = "utf-8">
+  <link href="HojaStyles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+</head>
+<body>
+    
+    
+
+ 
+    <h1 class="form-signin-heading text-muted"> Registrate:</h1>
+ 
+
+         <form action="registrar_usuarioCRUD.php" method="post"> 
+
+        <hr/>
+        <h3>Crea una cuenta</h3>
+
+        <!--Nombre Usuario-->
+        <label for="nombre">Nombre de Usuario:</label><br>
+        <input type="text" name="username" maxlength="32" required>
+        <br/><br/>
+
+        <!--Contraseña-->
+
+        
+        <form id="myform">
+        <label for="password">Contraseña:</label><br>
+        <input name="password" type="password"  name="password" minlength="6" maxlength="30" id="password" required>
+        <br/><br/>
+
+        <label for="password">Confirmar contraseña:</label><br>
+        <input type="password" name="password_again" minlength="6" maxlength="30" id="password_again" required>
+        <br/><br/>
+
+        <label for="pass">Dirección de correo electrónico:</label><br>
+        <input type="text" name="#" maxlength="30" required>
+        <br/><br/>
+        
+        <input type="submit" value="Enviar">
+        </form>
+        
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        
+        
+        <script>
+        // just for the demos, avoids form submit
+        jQuery.validator.setDefaults({
+          debug: true,
+          success: "valid"
+        });
+        $( "#myform" ).validate({
+          rules: {
+            password: "required",
+            password_again: {
+              equalTo: "#password"
+            }
+          }
+        });
+        </script>
+        
+
+        </form>
+        <form name="atras" id="atras" action="LoginCRUD.html" method="submit">
+        <input type="submit" name="submit" value="Atras">
+        </form>
+
+       
+        </body>
+</html>
